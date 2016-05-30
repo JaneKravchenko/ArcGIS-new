@@ -5,3 +5,4 @@ def enter_name():
     else:
         print "Sorry, try again, enter your name."
         return enter_name()
+print "Hello"
