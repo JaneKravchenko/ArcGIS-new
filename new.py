@@ -1,3 +1,5 @@
+import this
+
 def enter_name():
     name = raw_input("Enter your name: ")
     if name:
