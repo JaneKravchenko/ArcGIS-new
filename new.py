@@ -1,8 +1,3 @@
-import this
-
-#some commit
-#
-
 
 def enter_name():
     name = raw_input("Enter your name: ")
