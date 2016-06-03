@@ -7,5 +7,5 @@ def read_srtm(path):
     :return: numpy array dtype: float32
     """
     image = gdal.Open(path)
-    imarray = image.GetRasterBand(1)
-    return imarray.ReadAsArray().astype(np.float32)
+    return image.ReadAsArray().astype(np.float32)
+
