@@ -1,3 +1,4 @@
+import read_srtm
 def mowing_window(
         input_matrix, width, height, posi, posj):
     """
@@ -12,4 +13,9 @@ def mowing_window(
     range_i = range(posi, posi+width)
     range_j = range(posj, posj+height)
     # generate a temporary array
-    return map(lambda i, j: input_matrix[i][j], range_i, range_j)
+    new_array = []
+    for i in range_i:
+        new_array.append(map(lambda j: input_matrix[i][j], range_j))
+    return new_array
+
+#print mowing_window(read_srtm.read_srtm('/home/jane/Desktop/ArcGIS-new/clipped_all_map.tif'),5,5,0,0)
