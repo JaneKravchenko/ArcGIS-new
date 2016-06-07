@@ -13,9 +13,10 @@ def mowing_window(
     range_i = range(posi, posi+width)
     range_j = range(posj, posj+height)
     # generate a temporary array
-    new_array = []
     for i in range_i:
-        new_array.append(map(lambda j: input_matrix[i][j], range_j))
-    return new_array
+        for j in range_j:
+            if input_matrix[i][j] == -32768.0:
+                input_matrix[i][j] = 0
+    return map(lambda i: map(lambda j: input_matrix[i][j], range_j),range_i)
 
 #print mowing_window(read_srtm.read_srtm('/home/jane/Desktop/ArcGIS-new/clipped_all_map.tif'),5,5,0,0)
