@@ -10,7 +10,7 @@ def calculate_expected_value(input_temp_array):
     for i in input_temp_array:
         for j in i:
             temp.append(j)
-    return np.median(temp)
+    return np.mean(temp)
 
 def calculate_std(input_temp_array):
     """
