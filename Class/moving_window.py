@@ -1,3 +1,5 @@
+import numpy as np
+
 def mowing_window(
         input_matrix, width, height, posi, posj):
     """
@@ -18,4 +20,4 @@ def mowing_window(
         for j in range_j:
             if input_matrix[i][j] == -32768.0:
                 input_matrix[i][j] = 0
-    return map(lambda i: map(lambda j: input_matrix[i][j], range_j), range_i)
+    return np.array(map(lambda i: map(lambda j: input_matrix[i][j], range_j), range_i))

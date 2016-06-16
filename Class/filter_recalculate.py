@@ -22,10 +22,10 @@ def recalculate_array(temp_array,posi, posj, std, mean):
                         normal_value.append(j)
             if len(normal_value) > 1:
                 mean = np.mean(normal_value)
-                print '+++ '+ str(mean)
+
                 return {(mean_posi+posi, mean_posj+posj): mean}
             else:
-                print 'Not changed mean: '+ str(mean)
+
                 return {(mean_posi + posi, mean_posj + posj): mean}
     else:
         return str('Moving window width and height mus be unpaired')
