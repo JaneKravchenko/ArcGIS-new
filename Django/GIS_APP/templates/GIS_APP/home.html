@@ -1,0 +1,20 @@
+{% extends 'GIS_APP/base.html' %}
+{% load i18n %}
+
+
+{% block title %}
+    Home
+{% endblock %}
+
+
+{% block content %}
+    <h1>Про проект..</h1>
+
+
+    {% for article in articles %}
+        <h3><a href = {% url 'article' article.id %}>{{ article.title}}</a></h3>
+        <div>{{ article.get_short_text }}</div>
+    {% endfor %}
+
+
+{% endblock %}
